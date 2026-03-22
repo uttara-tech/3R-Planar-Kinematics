@@ -10,7 +10,7 @@ To ensure a user-friendly experience, joint angles are input and displayed in De
 ---
 # 📖 Technical Report 
 
-For a detailed technical report covering coordinate frame assignment, DH parameter table, and Kinematic modeling via DH convention, please see [Technical Report]()
+For a detailed technical report covering coordinate frame assignment, DH parameter table, and Kinematic modeling via DH convention, please see [Technical Report](docs/Technical%20Report.pdf)
 
 ### 🚀 Key Technical Specifications
 
@@ -41,7 +41,7 @@ The final pose of the 3rd link (end-effector) is calculated by the product of th
 $$^0_3T = ^0_1T(\theta_1) \cdot ^1_2T(\theta_2) \cdot ^2_3T(\theta_3)$$
 
 After solving for $^0_3T$, we get,
- 
+
 $ \begin{bmatrix} x_{EE} \\ y_{EE} \\ z_{EE} \end{bmatrix}$ = $\begin{bmatrix} a_1 \cos(\theta_1) + a_2 \cos(\theta_1 + \theta_2) + a_3 \cos(\theta_1 + \theta_2 + \theta_3) \\ a_1 \sin(\theta_1) + a_2 \sin(\theta_1 + \theta_2) + a_3 \sin(\theta_1 + \theta_2 + \theta_3)\\ 0 \end{bmatrix} $
 
 ![](media/img.png)

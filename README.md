@@ -36,6 +36,8 @@ This matrix-based approach ensures the codebase is easily extensible to higher D
 
 This project follows **Test-Driven Development (TDD)** principles to ensure mathematical reliability - a critical requirement for physical robotic systems.
 
+---
+
 ### 📂 Project Structure
 
 *   **`src/main.py`**: Core kinematics engine (DH Parameters) and interactive Matplotlib GUI.

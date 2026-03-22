@@ -3,6 +3,10 @@
 
 An interactive Forward Kinematics (FK) simulator for a 3-link planar robotic arm. This project demonstrates high-precision coordinate transformation, event-driven programming in Matplotlib, and rigorous software verification through unit testing.
 
+To ensure a user-friendly experience, joint angles are input and displayed in Degrees, while the underlying Kinematics Engine performs all DH-matrix calculations in Radians for precision.
+
+![](media/3R_manipulator.gif)
+
 ---
 # 📖 Technical Report 
 
@@ -38,6 +42,10 @@ $$^0_3T = ^0_1T(\theta_1) \cdot ^1_2T(\theta_2) \cdot ^2_3T(\theta_3)$$
 
 After solving for $^0_3T$, we get, 
 $ \begin{bmatrix} x_{EE} \\ y_{EE} \\ z_{EE} \end{bmatrix}$ = $\begin{bmatrix} a_1 \cos(\theta_1) + a_2 \cos(\theta_1 + \theta_2) + a_3 \cos(\theta_1 + \theta_2 + \theta_3) \\ a_1 \sin(\theta_1) + a_2 \sin(\theta_1 + \theta_2) + a_3 \sin(\theta_1 + \theta_2 + \theta_3)\\ 0 \end{bmatrix} $
+
+![](media/img.png)
+
+*Fig. Kinematic schematic of 3-DoF planar manipulator*
 
 This matrix-based approach ensures the codebase is easily extensible to higher Degree of Freedom (DOF) robotic systems and is compatible with industry-standard simulation configurations.
 
